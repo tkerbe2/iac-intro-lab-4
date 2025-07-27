@@ -20,7 +20,7 @@ In this guided exercise you will explore data types and how to use and manipulat
 <br>
 
 > 📖 Suggested Reading
-> [Overview - Variables and Outputs](https://developer.hashicorp.com/terraform/language/values)
+- [Overview - Variables and Outputs](https://developer.hashicorp.com/terraform/language/values)
 - [Input Variables](https://developer.hashicorp.com/terraform/language/values/variables)
 - [Local Values](https://developer.hashicorp.com/terraform/language/values/locals)
 - [Overview - Functions](https://developer.hashicorp.com/terraform/language/functions)
