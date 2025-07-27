@@ -65,6 +65,18 @@ Terraform Console is essentially a Terraform command that opens an interactive c
 
 <br>
 
+### 4. Verify Terraform and initialize the directory
+```terraform version```
+```cd tkdev-terraform-variables-and-functions/```
+```terraform init```
+
+<img width="876" height="302" alt="image" src="https://github.com/user-attachments/assets/f4c0b851-cda6-49a7-b0d6-c06ecf57a9aa" />
+
+***
+
+<br>
+
+
 
 
 
