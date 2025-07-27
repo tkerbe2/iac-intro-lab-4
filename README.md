@@ -15,23 +15,19 @@ This demo does not create resources.
 
 # 💡 Terms and Concepts
 
-Before we get started I want to discuss some key terms and concepts about AWS and accounts. This is not meant to be an AWS course or AWS specific guide but I realize many who take this will be new to AWS so I want to cover it. If this information is not new to you, feel free to skip this and the suggested reading.
-
-### AWS Accounts
-
-In AWS your account is like a container that all your resources you build such as VMs, buckets, etc, get attached to. Inside your account you can have users and roles with defined permissions, etc. All of this still lives within your account and your account will have a unique account ID that is tied to the email you used when you created it. Initially you will log into the AWS console with your root account (the account you created when you signed up) this will be your email. Root has unrestricted access to the entire AWS account and you rarely want to use this for day-to-day acitivity and creating infrastructure. This lab will walk through how to more tightely secure your root account with MFA and then create other accounts that you can use for this lab.
+In this guided exercise you will explore data types and how to use and manipulate them with variables, expressions, and functions. Building on these concepts you will then create some more dynamic code and validate it with Terraform Console. I recommend reading the links below for some additional examples and extra context. 
 
 <br>
 
-
-
-> 📖 Suggested Reading 
-- [What is an AWS account?](https://docs.aws.amazon.com/accounts/latest/reference/accounts-welcome.html)
-- [Terminology and concepts for AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html)
+> 📖 Suggested Reading
+> [Overview - Variables and Outputs](https://developer.hashicorp.com/terraform/language/values)
+- [Input Variables](https://developer.hashicorp.com/terraform/language/values/variables)
+- [Local Values](https://developer.hashicorp.com/terraform/language/values/locals)
+- [Overview - Functions](https://developer.hashicorp.com/terraform/language/functions)
+- [Overview - Expressions](https://developer.hashicorp.com/terraform/language/expressions)
+- [for Expressions](https://developer.hashicorp.com/terraform/language/expressions/for)
 
 <br>
-
-# Lab Steps
 
 # Lab Steps
 
