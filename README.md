@@ -15,7 +15,11 @@ This demo does not create resources.
 
 # 💡 Terms and Concepts
 
-In this guided exercise you will explore data types and how to use and manipulate them with variables, expressions, and functions. Building on these concepts you will then create some more dynamic code and validate it with Terraform Console. I recommend reading the links below for some additional examples and extra context. 
+In this guided exercise you will explore data types and how to use and manipulate them with variables, expressions, and functions. Building on these concepts you will then create some more dynamic code and validate it with Terraform Console. I recommend reading the links below from HashiCorps official documentation before starting the guided exercise. These readings are short and will give you some good fundamental knowledge of what we will cover in this guided exercise.
+
+## Terraform Console
+
+Terraform Console is essentially a Terraform command that opens an interactive command-line console you can interact with. This interactive console allows you to explore expressions and logic without actually creating resources. It can be incredibly useful for troubleshooting and validating your code before trying to deploy it. 
 
 <br>
 
@@ -52,8 +56,11 @@ In this guided exercise you will explore data types and how to use and manipulat
 
 <br>
 
-### 3. Find your Azure Subscription ID
-```az account show --query id --output tsv```
+### 3. Clone the Repo
+```git clone https://github.com/tkerbe2/tkdev-terraform-variables-and-functions/```
+
+<img width="876" height="302" alt="image" src="https://github.com/user-attachments/assets/f4c0b851-cda6-49a7-b0d6-c06ecf57a9aa" />
+
 <br>
 - This is showing you your Azure subscription ID, this is highly sensitive.
 <br>
