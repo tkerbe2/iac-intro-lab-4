@@ -61,12 +61,6 @@ Terraform Console is essentially a Terraform command that opens an interactive c
 
 <img width="876" height="302" alt="image" src="https://github.com/user-attachments/assets/f4c0b851-cda6-49a7-b0d6-c06ecf57a9aa" />
 
-<br>
-- This is showing you your Azure subscription ID, this is highly sensitive.
-<br>
-
-> **_Note:_** In a real world scenario we would want to pass this variable in a more secure way.
-
 ***
 
 <br>
