@@ -33,28 +33,40 @@ In AWS your account is like a container that all your resources you build such a
 
 # Lab Steps
 
-### 1. Log into AWS
+# Lab Steps
 
-- Log into AWS with your root account [AWS](https://aws.amazon.com/)
+### 1. Log into Azure and open Cloud Shell
 
-![image](https://github.com/user-attachments/assets/464af956-2c61-487d-bbef-acce4a9378f0)
+![cloudshell](https://github.com/user-attachments/assets/a24f345c-e380-4f54-8a4b-f6b8463c023e)
 
-<br>
-
-***
-
-### 2. Open Identity and Access Management (IAM)
-
-![image](https://github.com/user-attachments/assets/27f8a292-70a5-4475-9628-fd0c0ddda89c)
-
-- You can favorite it so it's easier to find later
+- In the top right corner of the UI there is a terminal looking icon.
 
 <br>
 
+
 ***
 
-### 3. Create and assign access to the user
+<br>
 
+### 2. Launch a Bash Cloud Shell
+- You will be asked if you want to launch a bash or power shell cloud shell. Choose bash for this example.
+![image](https://github.com/user-attachments/assets/e03421ca-8057-4539-bfe8-c638d9473b3b)
+
+***
+
+<br>
+
+### 3. Find your Azure Subscription ID
+```az account show --query id --output tsv```
+<br>
+- This is showing you your Azure subscription ID, this is highly sensitive.
+<br>
+
+> **_Note:_** In a real world scenario we would want to pass this variable in a more secure way.
+
+***
+
+<br>
 
 
 
