@@ -3,12 +3,15 @@
 #==============#
 
 resource "aws_vpc" "lab-vpc" {
-  cidr_block       = "10.10.0.0/23"
+  cidr_block       = var.cidr-block
   instance_tenancy = "default"
 
   tags = {
-    Name        = "lab-1-vpc"
-    Environment = "Dev"
+
+    # In this tag we use string interpolation to combine our naming prefix with -vpc at the end to identify the type of resource.
+    # Notice I use the same naming convention for the other resources.
+    Name        = "${local.prefix}-vpc"
+    Environment = var.environment
   }
 }
 
@@ -20,11 +23,11 @@ resource "aws_vpc" "lab-vpc" {
 
 resource "aws_subnet" "lab-web-sn" {
   vpc_id     = aws_vpc.lab-vpc.id
-  cidr_block = "10.10.0.0/24"
+  cidr_block = cidrsubnet(var.cidr-block, 2, )
 
   tags = {
-    Name = "lab-web-sn"
-    Environment = "Dev"
+    Name        = "${local.prefix}-web-sn"
+    Environment = var.environment
   }
 }
 

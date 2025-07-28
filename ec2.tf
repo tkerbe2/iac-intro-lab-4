@@ -21,8 +21,12 @@ resource "aws_instance" "lab-web-vm" {
   subnet_id           = # Need to add subnet with id
 
   tags = {
-    Name        = "lab-1-ec2"
-    Environment = "Dev"
+    
+    # Here we are adding our naming convention to the VM name.
+    Name        = "${local.prefix}-web-vm"
+
+    # This will use our environment 
+    Environment = var.environment
   }
 }
 
@@ -34,6 +38,7 @@ resource "aws_instance" "lab-web-vm" {
 
 resource "aws_eip" "lab-web-eip" {
 
-  instance = # Need to add instance id
+# This assigns the EIP assign to our EC2 instance in the code block above.
+  instance = aws_instance.lab-web-vm.id
   domain   = "vpc"
 }

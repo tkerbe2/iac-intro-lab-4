@@ -30,6 +30,7 @@ Terraform Console is essentially a Terraform command that opens an interactive c
 - [Overview - Functions](https://developer.hashicorp.com/terraform/language/functions)
 - [Overview - Expressions](https://developer.hashicorp.com/terraform/language/expressions)
 - [for Expressions](https://developer.hashicorp.com/terraform/language/expressions/for)
+- [Strings - Interpolation](https://developer.hashicorp.com/terraform/language/expressions/strings)
 
 <br>
 
@@ -67,8 +68,16 @@ Terraform Console is essentially a Terraform command that opens an interactive c
 
 ### 4. Verify Terraform and initialize the directory
 ```terraform version```
+
+<br>
+
 ```cd tkdev-terraform-variables-and-functions/```
+
+<br>
+
 ```terraform init```
+
+<br>
 
 <img width="876" height="302" alt="image" src="https://github.com/user-attachments/assets/f4c0b851-cda6-49a7-b0d6-c06ecf57a9aa" />
 
