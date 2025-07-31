@@ -24,7 +24,6 @@ locals {
 # Using "${}" forces Terraform to evaluate the expression between the curly braces and convert the result to string.
 prefix = "${var.org}-${local.region-code}-${var.environment}"
 
-environment-list = ["prod", "non-prod", "dev", "test", "sandbox", "stage"]
 
 
 #======================#

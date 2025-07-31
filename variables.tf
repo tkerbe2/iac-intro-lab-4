@@ -63,9 +63,9 @@ variable "environment" {
 # Here I've created a validation block inside of my variable. 
 # This block basically says the variable has to meet my condition criteria or else it will display an error message.
 # This is very similar to what we did above except we're using a built-in function called contains.
-# If our variable contains any of the values in the list, it will return true. To see these values go to locals.tf
+# If our variable contains any of the values in the list, it will return true.
 validation {
-    condition     = contains(local.environment-list)
+    condition     = contains(["prod", "non-prod", "dev", "test", "sandbox", "stage"])
     error_message = "Not a valid environment type." 
     }
 }
