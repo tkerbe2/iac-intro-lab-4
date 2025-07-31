@@ -37,7 +37,7 @@ variable "environment" {
 # The case doesn't matter because the lower() function will set my variable to lowercase when it checks.
 
 validation {
-    condition     = lower(var.environment) == "prod" || lower(var.environment) == "nonprod" || lower(var.environment) == "dev" || lower(var.environment) == "test" 
+    condition     = contains(local.environment-list)
     error_message = "Not a valid environment type." 
     }
 }

@@ -17,8 +17,8 @@ region-code = lookup(var.region-codes, var.region, var.region)
 # This allows us to keep a consistent name for all of our resources and tags without changing them individually.
 # Notice we're also wrapping our variable and name with "${}" This is string interpolation. 
 # Using "${}" forces Terraform to evaluate the expression between the curly braces and convert the result to string.
-# The result will looking something like this: tkdev-ue1-prod
-prefix = "${var.org}"-"${local.region-code}"-"${var.environment}"
+prefix = "${var.org}-${local.region-code}-${var.environment}"
 
+environment-list = ["prod", "non-prod", "dev", "test", "sandbox", "stage"]
 
 }
