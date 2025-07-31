@@ -1,3 +1,12 @@
+#                     _    __ 
+#                    | |  / _|
+#  __   ___ __   ___ | |_| |_ 
+#  \ \ / / '_ \ / __|| __|  _|
+#   \ V /| |_) | (__ | |_| |  
+#    \_/ | .__/ \___(_)__|_|  
+#        | |                  
+#        |_|                  
+
 #==============#
 # VPC Resource #
 #==============#
@@ -22,8 +31,9 @@ resource "aws_vpc" "lab-vpc" {
 # Here we create a single subnet for our VM to live in.
 
 resource "aws_subnet" "lab-web-sn" {
+ for_each = var.az-list  
   vpc_id     = aws_vpc.lab-vpc.id
-  cidr_block = cidrsubnet(var.cidr-block, 2, )
+  cidr_block = cidrsubnet(var.cidr-block, 2, each.value)
 
   tags = {
     Name        = "${local.prefix}-web-sn"

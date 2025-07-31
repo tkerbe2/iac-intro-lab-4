@@ -1,3 +1,11 @@
+#   _                 _      _    __ 
+#  | |               | |    | |  / _|
+#  | | ___   ___ __ _| |___ | |_| |_ 
+#  | |/ _ \ / __/ _` | / __|| __|  _|
+#  | | (_) | (_| (_| | \__ \| |_| |  
+#  |_|\___/ \___\__,_|_|___(_)__|_|  
+                            
+
 #===========================#
 # Local Values Defined Here #
 #===========================#
@@ -6,12 +14,9 @@
 
 locals {
 
-# This reads as the following.
-# We are creating a local variable called region-code and assigning it the value of the output of this lookup function.
-# The lookup function looks at the map of string key/pair values using our region variable as the key.
-# Since our region is a valid key in that map, it will return it's value.
-region-code = lookup(var.region-codes, var.region, var.region)
-
+#=============#
+# Name Prefix #
+#=============#
 
 # This prefix combines other variables and separates them with a "-" so that it can be used in our resource blocks dynamically.
 # This allows us to keep a consistent name for all of our resources and tags without changing them individually.
@@ -20,5 +25,18 @@ region-code = lookup(var.region-codes, var.region, var.region)
 prefix = "${var.org}-${local.region-code}-${var.environment}"
 
 environment-list = ["prod", "non-prod", "dev", "test", "sandbox", "stage"]
+
+
+#======================#
+# Region Mapping Logic #
+#======================#
+
+# We are creating a local variable called region-code and assigning it the value of the output of this lookup function.
+# The lookup function looks at the map of string key/pair values using our region variable as the key.
+# Since our region is a valid key in that map, it will return it's value.
+# Additionally our region value default is "us-east-1" so if it's left default then our default region ID is ue1.
+region-code = lookup(var.region-codes, var.region, "ue1")
+
+
 
 }
