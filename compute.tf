@@ -28,9 +28,8 @@ resource "aws_instance" "lab-web-vm" {
  for_each = var.az-list
   ami                         = data.aws_ami.amzn_linux.id
   instance_type               = var.instance-type
-  subnet_id                   = # Need to add subnet with id
+  subnet_id                   = aws_subnet.lab-web-sn[each.key].id
   user_data                   = file("boostrap.sh")
-  associate_public_ip_address = 
 
   tags = {
     

@@ -8,111 +8,33 @@
 #=======================#
 # Define Variables Here #
 #=======================#
-# Read notes in numerical order
 
-# 1.
-#------
-# a .tfvars file is a file extension that Terraform uses to define input variables.  
-# What we're doing here is telling Terraform how to treat these variables by specifying the following:
-# Data type, validation and conditions, default values, and if the data is sensitive or not. 
+# Enter a valid region here or the default of us-east-1 will be applied.
+# Note that if you look at variables.tf we have a validation condition for this so only the following regions are allowed:
+# us-east-1, us-east-2, us-west-1, us-west-2.
 
-#====================#
-# Attributes Section #
-#====================#
+region        = "us-east-2"
+environment   = "Dev"
+org           = "tkdev"
 
+instance-type = "t3.micro"
 
-# 2.
-#------
-# Our first variable is of the type string and we use it to set our region.
-variable "region" {
-    type        = string
-    description = "Used to specify the region to deploy our resources to and apply to naming conventions."
+# Go to https://cidr.xyz/ for subnet help.
+cidr-block    = "192.168.200.0/22"
 
-# 3.
-#------
-# Notice I've set a default for this variable here. This means that if no value is supplied elsewhere -- the default value will be applied.    
-    default     = "us-east-1"
-
-
-#====================#
-# Validation Section #
-#====================#
-# 4.
-# Pretend our organization only allows the use of certain regions. We can create a simple validation condition to ensure only those regions are used. 
-# Examine the validation condition carefully. Ask yourself what do you think this code is doing? 
-
-# 5.
-# lower() is a function that converts string text to lowercase.
-# || is the operator for OR.
-# == operator returns true if both objects being compared have the same value and same type.
-# example 1: "a" == "b" would return false because although they are both strings - their values are different.
-# example 2: "a" == "a" would return trube because both are strings and have the same value.
-
-validation {
-    condition     = lower(var.region) == "us-east-1" || lower(var.region) == "us-east-2" || lower(var.region) == "us-west-1" || lower(var.region) == "us-west-2"
-    error_message = "Not a supported region." 
-    }
+# This is a map of string with a key value pair. We use this map to associate our region with an abbreviated region code.
+# If you go to the locals.tf file you can see me utilize the lookup() function to retrieve a region code based on our region we assign above.
+region-codes = {
+    us-east-1 = "ue1"
+    us-east-2 = "ue2"
+    us-west-1 = "uw1"
+    us-west-2 = "uw2"
 }
 
-# 6.
-# This next variable is used mostly for naming conventions and to identify what type of environment we are deplying resources to.
-variable "environment" {
-    type        = string
-    description = "Used in naming conventions and tagging to identify the environment type"
+# This list below I've created for some looping mechanisms in compute.tf.
+# This is a key value pair with the keys being a and b, where the values are 1 and 2.
+az-list = {
+    a = "1"
+    b = "2"
 
-# 7.
-# Here I've created a validation block inside of my variable. 
-# This block basically says the variable has to meet my condition criteria or else it will display an error message.
-# This is very similar to what we did above except we're using a built-in function called contains.
-# If our variable contains any of the values in the list, it will return true. To see these values go to locals.tf
-validation {
-    condition     = contains(local.environment-list)
-    error_message = "Not a valid environment type." 
-    }
 }
-
-
-# 8.
-# Another simple string variable for our instanec type/
-variable "instance-type" {
-    type = string
-}
-
-
-
-# 9. 
-# Here I create a variable for the org which is just an example of another variable we could use for naming conventions.
-variable "org" {
-    type        = string
-    description = "The name of the organization used for naming convention and tagging. Must be less than 6 characters"
-
-# 10.
-# I've created another example of a validation condition that looks for length of a variable.
-# This will return a message if the variable is more than 10 characters long.
-validation {
-    condition     = length(var.org) <= 10
-    error_message = "Not a valid org." 
-    }
-}
-
-# 11.
-# This variable is a map of string values. This means it has a key and a value pair to which the value is a string.
-# In the variables.tf you will see the values I've entered for this demonstration. 
-variable "region-code" {
-    type        = map(string)
-    description = "A map of region codes used for naming convention and tagging." 
-}
-
-variable "az-list" {
-    type        = map(string)
-    description = "A map of azs for a specific region" 
-}
-
-# 12.
-# Another great example of something to variabilize. The CIDR block is often something that can be referenced from other resources or functions.
-# This represents a way to make our code more dynamic. 
-variable "cidr-block" {
-    type        = string
-    description = "This variable represents our VPC CIDR block that will apply to the VPC resource itself and can be referenced elsewhere."
-}
-
