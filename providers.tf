@@ -7,12 +7,17 @@
 #  | |                                                  
 #  |_|                                                  
 
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.0"
+    }
+  }
+}
 
+# Configure the AWS Provider
+provider "aws" {
+  region = var.region
+}
 
-#======================#
-#  AWS Provider Block  #
-#======================#
-
-# Need to add a basic provider block for AWS with the us-east-1 region here.
-# I can find examples here:
-# https://registry.terraform.io/providers/hashicorp/aws/latest/docs
