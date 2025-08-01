@@ -10,7 +10,11 @@
 # Local Values Defined Here #
 #===========================#
 
+# Read notes in numerical order
+
+# 1.
 # Here we are going to create a name prefix with our other variables and you can see how this makes the code more dynamic.
+# We use the local block to accomplish this.
 
 locals {
 
@@ -18,6 +22,7 @@ locals {
 # Name Prefix #
 #=============#
 
+# 2.
 # This prefix combines other variables and separates them with a "-" so that it can be used in our resource blocks dynamically.
 # This allows us to keep a consistent name for all of our resources and tags without changing them individually.
 # Notice we're also wrapping our variable and name with "${}" This is string interpolation. 
@@ -30,6 +35,7 @@ prefix = "${var.org}-${local.region-code}-${var.environment}"
 # Region Mapping Logic #
 #======================#
 
+# 3.
 # We are creating a local variable called region-code and assigning it the value of the output of this lookup function.
 # The lookup function looks at the map of string key/pair values using our region variable as the key.
 # Since our region is a valid key in that map, it will return it's value.

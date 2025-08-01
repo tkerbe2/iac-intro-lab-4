@@ -11,12 +11,15 @@
 # VPC Resource #
 #==============#
 
+# Read notes in numerical order
+
 resource "aws_vpc" "lab-vpc" {
   cidr_block       = var.cidr-block
   instance_tenancy = "default"
 
   tags = {
 
+    # 1.
     # In this tag we use string interpolation to combine our naming prefix with -vpc at the end to identify the type of resource.
     # Notice I use the same naming convention for the other resources.
     Name        = "${local.prefix}-vpc"
@@ -28,7 +31,9 @@ resource "aws_vpc" "lab-vpc" {
 # Subnet Resource #
 #=================#
 
-# Here we create a single subnet for our VM to live in.
+# 2.
+# Here we create multiple subnets using the for_each Meta-Argument.
+# This allows us to create multiple resources with a single resource block.
 
 resource "aws_subnet" "lab-web-sn" {
  for_each = var.az-list  
@@ -49,8 +54,8 @@ resource "aws_internet_gateway" "lab-igw" {
   vpc_id = aws_vpc.lab-vpc.id
 
   tags = {
-    Name        = "lab-1-igw"
-    Environment = "Dev"
+    Name        = "${local.prefix}-web-sn"
+    Environment = var.environment
   }
 }
 
@@ -67,7 +72,7 @@ resource "aws_default_route_table" "lab-default-rt" {
     }
 
   tags = {
-    Name        = "lab-1-default-rt"
-    Environment = "Dev"
+    Name        = "${local.prefix}-web-sn"
+    Environment = var.environment
   }
 }
