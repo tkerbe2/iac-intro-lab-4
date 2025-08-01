@@ -36,7 +36,7 @@ resource "aws_instance" "lab-web-vm" {
     # Here we are adding our naming convention to the VM name and then adding the key from the looping mechanism.
     Name        = "${local.prefix}-web-vm-${each.key}"
 
-    # This will use our environment 
+    # This will use our environment variable as a tag.
     Environment = var.environment
   }
 }

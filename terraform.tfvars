@@ -20,7 +20,7 @@ org           = "tkdev"
 instance-type = "t3.micro"
 
 # Go to https://cidr.xyz/ for subnet help.
-cidr-block    = "192.168.200.0/22"
+cidr-block    = "192.168.200.0/23"
 
 # This is a map of string with a key value pair. We use this map to associate our region with an abbreviated region code.
 # If you go to the locals.tf file you can see me utilize the lookup() function to retrieve a region code based on our region we assign above.

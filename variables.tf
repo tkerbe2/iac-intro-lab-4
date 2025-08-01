@@ -112,3 +112,8 @@ variable "cidr-block" {
     description = "This variable represents our VPC CIDR block that will apply to the VPC resource itself and can be referenced elsewhere."
 }
 
+# 13. This is a number variable I use to create unique subnets in the vpc.tf. When the looping mechanism in vpc.tf starts in adds a +1 every time it runs.
+variable "sn_incrementer" {
+    type    = number
+    default = 0
+}
