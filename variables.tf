@@ -94,7 +94,7 @@ validation {
 # 11.
 # This variable is a map of string values. This means it has a key and a value pair to which the value is a string.
 # In the variables.tf you will see the values I've entered for this demonstration. 
-variable "region-code" {
+variable "region-codes" {
     type        = map(string)
     description = "A map of region codes used for naming convention and tagging." 
 }
