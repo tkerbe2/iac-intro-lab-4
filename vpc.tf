@@ -13,17 +13,17 @@
 
 # Read notes in numerical order
 
-resource "aws_vpc" "lab-vpc" {
-  cidr_block       = var.cidr-block
+resource "aws_vpc" "lab_vpc" {
+  cidr_block       = var.cidr_block
   instance_tenancy = "default"
 
   tags = {
 
     # 1.
-    # In this tag we use string interpolation to combine our naming prefix with -vpc at the end to identify the type of resource.
+    # In this tag we use string interpolation to combine our naming name prefix with -vpc at the end to identify the type of resource.
     # Notice I use the same naming convention for the other resources.
-    Name        = "${local.prefix}-vpc"
-    Environment = var.environment
+    Name        = "${local.name_prefix}-vpc"
+    Environment = var.env
   }
 }
 
@@ -35,14 +35,15 @@ resource "aws_vpc" "lab-vpc" {
 # Here we create multiple subnets using the for_each Meta-Argument.
 # This allows us to create multiple resources with a single resource block.
 
-resource "aws_subnet" "lab-web-sn" {
- for_each = var.az-list  
-  vpc_id     = aws_vpc.lab-vpc.id
-  cidr_block = cidrsubnet(var.cidr-block, 5, var.sn_incrementer + 1)
-  availability_zone           = "${var.region}${each.key}"
+resource "aws_subnet" "lab_web_sn" {
+count = length(local.availability-zones)
+
+  vpc_id     = aws_vpc.lab_vpc.id
+  cidr_block = cidrsubnet(var.cidr_block, var.borrowed_bits, count.index)
+  availability_zone           = var.availability_zones[count.index]
   tags = {
-    Name        = "${local.prefix}-web-sn"
-    Environment = var.environment
+    Name        = "${local.name_prefix}-${count.index + 1}-web"
+    Environment = var.env
   }
 }
 
@@ -50,12 +51,12 @@ resource "aws_subnet" "lab-web-sn" {
 # Internet Gateway #
 #==================#
 
-resource "aws_internet_gateway" "lab-igw" {
+resource "aws_internet_gateway" "lab_igw" {
   vpc_id = aws_vpc.lab-vpc.id
 
   tags = {
-    Name        = "${local.prefix}-web-sn"
-    Environment = var.environment
+    Name        = "${local.name_prefix}-web-igw"
+    Environment = var.env
   }
 }
 
@@ -63,16 +64,16 @@ resource "aws_internet_gateway" "lab-igw" {
 # Default Route Table #
 #=====================#
 
-resource "aws_default_route_table" "lab-default-rt" {
+resource "aws_default_route_table" "lab_default_rt" {
   default_route_table_id = aws_vpc.lab-vpc.default_route_table_id
 
     route {
-    cidr_block = var.cidr-block
-    gateway_id = aws_internet_gateway.lab-igw.id
+    cidr_block = var.cidr_block
+    gateway_id = aws_internet_gateway.lab_igw.id
     }
 
   tags = {
-    Name        = "${local.prefix}-web-sn"
-    Environment = var.environment
+    Name        = "${local.name_prefix}-web-sn"
+    Environment = var.env
   }
 }
