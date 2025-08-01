@@ -65,7 +65,7 @@ variable "env" {
 # This is very similar to what we did above except we're using a built-in function called contains.
 # If our variable contains any of the values in the list, it will return true.
 validation {
-    condition     = contains(["prod", "non-prod", "dev", "test", "sandbox", "stage"], var.environment)
+    condition     = contains(["prod", "non-prod", "dev", "test", "sandbox", "stage"], var.env)
     error_message = "Not a valid environment type." 
     }
 }

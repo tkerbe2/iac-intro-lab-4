@@ -77,3 +77,12 @@ resource "aws_default_route_table" "lab_default_rt" {
     Environment = var.env
   }
 }
+
+#=========================#
+# Route Table Association #
+#=========================#
+resource "aws_route_table_association" "rt_a" {
+  count          = length(var.availability_zones)
+  subnet_id      = aws_subnet.lab_web_sn[count.index].id
+  route_table_id = aws_default_route_table.lab_default_rt.id
+}
