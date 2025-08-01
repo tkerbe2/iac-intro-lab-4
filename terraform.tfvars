@@ -54,7 +54,6 @@ availability_zones = {
 }
 
 
-
 # What size of network you want
 # 5 is a /28
 borrowed_bits = 5

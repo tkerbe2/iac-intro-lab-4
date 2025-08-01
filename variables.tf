@@ -93,13 +93,13 @@ validation {
 
 # 11.
 # This variable is a map of string values. This means it has a key and a value pair to which the value is a string.
-# In the variables.tf you will see the values I've entered for this demonstration. 
-variable "region_code" {
+# In the terraform.tfvars you will see the values I've entered for this demonstration. 
+variable "availability_zones" {
     type        = map(string)
-    description = "A map of region codes used for naming convention and tagging." 
+    description = "A map of availability zones used for naming convention and logic." 
 }
 
-variable "az-list" {
+variable "region-codes" {
     type        = map(string)
     description = "A map of azs for a specific region" 
 }
