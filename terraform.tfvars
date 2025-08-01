@@ -14,7 +14,7 @@
 # us-east-1, us-east-2, us-west-1, us-west-2.
 
 region        = "us-east-2"
-environment   = "Dev"
+environment   = "dev"
 org           = "tkdev"
 
 instance-type = "t3.micro"
