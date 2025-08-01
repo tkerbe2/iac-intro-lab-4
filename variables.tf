@@ -99,7 +99,7 @@ variable "availability_zones" {
     description = "A map of availability zones used for naming convention and logic." 
 }
 
-variable "region-codes" {
+variable "region_codes" {
     type        = map(string)
     description = "A map of azs for a specific region" 
 }
