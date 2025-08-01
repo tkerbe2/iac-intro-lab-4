@@ -3,7 +3,7 @@
 <br>
 
 
-# 🧪 Testing Variables and Functions with Terraform Console - Guided Lab
+# 🧪 Lab 4 - Testing Variables and Functions with Terraform Console
 
 In this lab you will be introduced to Terraform Console where we can test our variables, functions, data structures, and other logic with the CLI. In this lab you will not deploy any resources to AWS or Azure.  
 
