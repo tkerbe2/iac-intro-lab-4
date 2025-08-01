@@ -11,7 +11,7 @@
 resource "aws_security_group" "web_servers_sg" {
   name        = "${local.name_prefix}_web_server_sg"
   description = "Allow HTTP and HTTPS traffic to web servers"
-  vpc_id      = aws_vpc.main_vpc.id
+  vpc_id      = aws_vpc.lab_vpc.id
 
   egress {
     from_port        = 0

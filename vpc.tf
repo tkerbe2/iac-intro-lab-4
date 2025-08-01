@@ -36,7 +36,7 @@ resource "aws_vpc" "lab_vpc" {
 # This allows us to create multiple resources with a single resource block.
 
 resource "aws_subnet" "lab_web_sn" {
-count = length(local.availability-zones)
+count = length(local.availability_zones)
 
   vpc_id     = aws_vpc.lab_vpc.id
   cidr_block = cidrsubnet(var.cidr_block, var.borrowed_bits, count.index)
@@ -52,7 +52,7 @@ count = length(local.availability-zones)
 #==================#
 
 resource "aws_internet_gateway" "lab_igw" {
-  vpc_id = aws_vpc.lab-vpc.id
+  vpc_id = aws_vpc.lab_vpc.id
 
   tags = {
     Name        = "${local.name_prefix}-web-igw"
