@@ -38,9 +38,9 @@ resource "aws_instance" "lab_web_vm" {
 # az-list is a map with a key and a value.
 # az-list has 2 items so it will create 2 resources here.
   count                       = length(local.availability_zones)
-  ami                         = data.aws_amazon_linux-2.id
+  ami                         = data.aws_ami.amazon_linux_2.id
   instance_type               = var.instance_type
-  subnet_id                   = aws_subnet.lab_web_sn[cound.index].id
+  subnet_id                   = aws_subnet.lab_web_sn[count.index].id
   user_data                   = file("./bootstrap.sh")
 
   tags = {
