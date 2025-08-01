@@ -29,7 +29,7 @@ resource "aws_instance" "lab-web-vm" {
   ami                         = data.aws_ami.amzn_linux.id
   instance_type               = var.instance-type
   subnet_id                   = aws_subnet.lab-web-sn[each.key].id
-  user_data                   = file("boostrap.sh")
+  user_data                   = boostrap.sh
 
   tags = {
     
