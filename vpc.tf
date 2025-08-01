@@ -38,7 +38,7 @@ resource "aws_vpc" "lab-vpc" {
 resource "aws_subnet" "lab-web-sn" {
  for_each = var.az-list  
   vpc_id     = aws_vpc.lab-vpc.id
-  cidr_block = cidrsubnet(var.cidr-block, 5, {var.sn_incrementer + 1})
+  cidr_block = cidrsubnet(var.cidr-block, 5, var.sn_incrementer + 1)
   availability_zone           = "${var.region}${each.key}"
   tags = {
     Name        = "${local.prefix}-web-sn"
