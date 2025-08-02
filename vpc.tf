@@ -90,7 +90,7 @@ resource "aws_route_table_association" "rt_a" {
   route_table_id = aws_default_route_table.lab_default_rt.id
 }
 
-resource "aws_route_table_association" "rt_a" {
+resource "aws_route_table_association" "rt_b" {
 
   subnet_id      = aws_subnet.lab_web_sn_b.id
   route_table_id = aws_default_route_table.lab_default_rt.id
