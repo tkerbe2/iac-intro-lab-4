@@ -21,7 +21,7 @@ resource "aws_security_group" "web_servers_sg" {
   }
   
   tags = {
-    Name        = "tkdev-use1-dev-web-vm-a"
+    Name        = "tkdev-use1-dev-web-servers-sg"
     Environment = "dev"
   }
 
