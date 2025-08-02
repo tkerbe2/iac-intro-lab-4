@@ -42,7 +42,7 @@ resource "aws_instance" "lab_web_vm_a" {
   }
 }
 
-resource "aws_instance" "lab_web_vm_a" {
+resource "aws_instance" "lab_web_vm_b" {
 
   ami                         = data.aws_ami.amazon_linux_2.id
   instance_type               = "t3.micro"
