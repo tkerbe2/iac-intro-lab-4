@@ -58,7 +58,7 @@ Terraform Console is essentially a Terraform command that opens an interactive c
 <br>
 
 ### 3. Clone the Repo
-```git clone https://github.com/tkerbe2/tkdev-terraform-variables-and-functions/```
+```git clone https://github.com/tkerbe2/iac-intro-lab-4/```
 
 <img width="876" height="302" alt="image" src="https://github.com/user-attachments/assets/f4c0b851-cda6-49a7-b0d6-c06ecf57a9aa" />
 
@@ -71,7 +71,7 @@ Terraform Console is essentially a Terraform command that opens an interactive c
 
 <br>
 
-```cd tkdev-terraform-variables-and-functions/```
+```cd iac-intro-lab-4/```
 
 <br>
 
