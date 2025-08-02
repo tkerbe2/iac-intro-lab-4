@@ -11,7 +11,6 @@
 # VPC Resource #
 #==============#
 
-# Read notes in numerical order
 
 resource "aws_vpc" "lab_vpc" {
   cidr_block       = "192.168.200.0/23"
