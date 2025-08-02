@@ -84,13 +84,13 @@ resource "aws_default_route_table" "lab_default_rt" {
 # Route Table Association #
 #=========================#
 
-resource "aws_route_table_association" "rt_a" {
+resource "aws_route_table_association" "rta_a" {
 
   subnet_id      = aws_subnet.lab_web_sn_a.id
   route_table_id = aws_default_route_table.lab_default_rt.id
 }
 
-resource "aws_route_table_association" "rt_b" {
+resource "aws_route_table_association" "rta_b" {
 
   subnet_id      = aws_subnet.lab_web_sn_b.id
   route_table_id = aws_default_route_table.lab_default_rt.id
