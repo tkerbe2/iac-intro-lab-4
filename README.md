@@ -36,7 +36,7 @@ Terraform Console is essentially a Terraform command that opens an interactive c
 
 # Lab Steps
 
-### 1. Pull the static code from the main repo
+### 1. Fork my repo with your own personal GitHub
 
 - I recommend using your own computer with Git and Terraform installed to follow along. Additionally I would open this code with Visual Studio Code.
 
@@ -69,17 +69,63 @@ tags = {
 
 <br>
 
-### 3. Clone the Repo
-```git clone https://github.com/tkerbe2/iac-intro-lab-4/```
+### 3. Change the tags
 
-<img width="876" height="302" alt="image" src="https://github.com/user-attachments/assets/f4c0b851-cda6-49a7-b0d6-c06ecf57a9aa" />
+- Find all the tags in all of the .tf files and change them to something different. In my example below you can see I've changed them to the following:
+- Don't forget you have to change these everywhere they exist - to be consistent so you will want to change them on all resources of security.tf, compute.tf, and vpc.tf.
+- It will be easiest to run a find and replace in Visual Studio Code.
+
+```
+tags = {
+    Name        = "abc-use1-prod-vpc"
+    Environment = "prod"
+  }
+}
+```
+
+### 4. Change the region
+
+- Next open the providers.tf and change the region to something other than us-east-1.
+
+```
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.0"
+    }
+  }
+}
+
+provider "aws" {
+  region = "us-east-2"
+}
+```
+- Now that you've changed the region you have to change your tags again for the naming convention to match right?
+
+```
+tags = {
+    Name        = "abc-use2-prod-vpc"
+    Environment = "prod"
+  }
+}
+```
+- I have now changes my region abbreviation from use1 (us-east-1) to use2 (us-east-2) to match.
 
 ***
 
 <br>
 
-### 4. Verify Terraform and initialize the directory
-```terraform version```
+### 4. Save and deploy this code
+
+- I recommend using Terraform Cloud and creating a new workspace.
+
+<img width="1487" height="176" alt="image" src="https://github.com/user-attachments/assets/c6161b3f-6595-4af8-aa07-7a66b886bbdd" />
+
+- Using VCS attach it to your GitHub repo that you should have forked from mine.
+
+<img width="1454" height="696" alt="image" src="https://github.com/user-attachments/assets/4ae0a6d1-6ce5-49f3-af80-8c6056cb8a9f" />
+
 
 <br>
 
