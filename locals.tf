@@ -30,7 +30,6 @@ locals {
 name_prefix = "${var.org_name}-${local.region_code}-${var.env}"
 
 
-
 #===================#
 # Region Map Lookup #
 #===================#

@@ -40,7 +40,7 @@ count = length(local.availability_zones)
 
   vpc_id     = aws_vpc.lab_vpc.id
   cidr_block = cidrsubnet(var.cidr_block, var.borrowed_bits, count.index)
-  availability_zone           = var.availability_zones[count.index]
+  availability_zone = local.availability_zones[count.index]
   tags = {
     Name        = "${local.name_prefix}-${count.index + 1}-web"
     Environment = var.env
@@ -82,7 +82,7 @@ resource "aws_default_route_table" "lab_default_rt" {
 # Route Table Association #
 #=========================#
 resource "aws_route_table_association" "rt_a" {
-  count          = length(var.availability_zones)
+  count          = length(local.availability_zones)
   subnet_id      = aws_subnet.lab_web_sn[count.index].id
   route_table_id = aws_default_route_table.lab_default_rt.id
 }

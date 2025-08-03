@@ -51,7 +51,8 @@ resource "aws_instance" "lab_web_vm" {
     # Notice I use the same naming convention for the other resources and we're calling local instead of var. 
     # Calling local means we're calling from the local block which is in our locals.tf file.
     Name        = "${local.name_prefix}-web-vm-${count.index + 1}"
-
+                    # tkdev-use2-dev-web-vm-1
+                    # tkdev-use2-dev-web-vm-2
     # This will use our environment variable as a tag.
     Environment = var.env
   }
