@@ -42,6 +42,7 @@ Terraform Console is essentially a Terraform command that opens an interactive c
 - Fork this repo so you can have your own version if it to use.
 
 <img width="1239" height="62" alt="image" src="https://github.com/user-attachments/assets/18d9c691-ce13-47b9-ad5a-f8ee7747b2bc" />
+[IaC Intro Lab 4](https://github.com/tkerbe2/iac-intro-lab-4)
 
 <br>
 
