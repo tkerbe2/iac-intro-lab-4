@@ -129,6 +129,12 @@ tags = {
 
 <img width="1454" height="696" alt="image" src="https://github.com/user-attachments/assets/4ae0a6d1-6ce5-49f3-af80-8c6056cb8a9f" />
 
+- Add your environment variables.
+***If you forgot how to do this check out*** [IaC Intro Lab 2](https://github.com/tkerbe2/iac-intro-lab-2)
+
+<img width="1807" height="498" alt="image" src="https://github.com/user-attachments/assets/81e9c203-be98-4457-8c4f-f5f618c25482" />
+
+- Run a plan and apply
 
 <br>
 
