@@ -7,4 +7,4 @@ git clone https://github.com/tkerbe2/iac-intro-lab-4
 cd iac-intro-lab-4
 chmod 700 bash-html-create.sh
 ./bash-html-create.sh
-python3 -m http.server 80 >> output.html
+python3 -m http.server 80 >> landing.html
