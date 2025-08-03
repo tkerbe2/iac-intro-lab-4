@@ -36,22 +36,34 @@ Terraform Console is essentially a Terraform command that opens an interactive c
 
 # Lab Steps
 
-### 1. Log into Azure and open Cloud Shell
+### 1. Pull the static code from the main repo
 
-![cloudshell](https://github.com/user-attachments/assets/a24f345c-e380-4f54-8a4b-f6b8463c023e)
+- I recommend using your own computer with Git and Terraform installed to follow along. Additionally I would open this code with Visual Studio Code.
 
-- In the top right corner of the UI there is a terminal looking icon.
+```git clone https://github.com/tkerbe2/iac-intro-lab-4/```
 
 <br>
-
 
 ***
 
 <br>
 
-### 2. Launch a Bash Cloud Shell
-- You will be asked if you want to launch a bash or power shell cloud shell. Choose bash for this example.
-![image](https://github.com/user-attachments/assets/e03421ca-8057-4539-bfe8-c638d9473b3b)
+### 2. Analyze the code
+
+- Look at the code and try and figure out what it's creating and look at each resource block.
+
+<img width="447" height="550" alt="image" src="https://github.com/user-attachments/assets/a00a8479-8efc-44ab-af47-22b6b09ade16" />
+
+- Notice the naming on the tags and how similar it is between resources. This is something we can make more dynamic and reusable with variables.
+- Look at other code and see if you can find other patterns like this that could be variabilized. 
+
+```  
+tags = {
+    Name        = "tkdev-use1-dev-vpc"
+    Environment = "dev"
+  }
+}
+```
 
 ***
 
