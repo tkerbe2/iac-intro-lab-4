@@ -119,34 +119,46 @@ tags = {
 
 <br>
 
-### 4. Save and deploy this code
+### 5. Create a new HCP Terraform workspace
 
 - I recommend using Terraform Cloud and creating a new workspace.
 
+<br>
+
 <img width="1487" height="176" alt="image" src="https://github.com/user-attachments/assets/c6161b3f-6595-4af8-aa07-7a66b886bbdd" />
+
+<br>
 
 - Using VCS attach it to your GitHub repo that you should have forked from mine.
 
+<br>
+
 <img width="1454" height="696" alt="image" src="https://github.com/user-attachments/assets/4ae0a6d1-6ce5-49f3-af80-8c6056cb8a9f" />
+
+<br>
 
 - Add your environment variables.
 ***If you forgot how to do this check out*** [IaC Intro Lab 2](https://github.com/tkerbe2/iac-intro-lab-2)
 
+<br>
+
 <img width="1807" height="498" alt="image" src="https://github.com/user-attachments/assets/81e9c203-be98-4457-8c4f-f5f618c25482" />
 
-- Run a plan and apply
+<br>
+
+***
 
 <br>
 
-```cd iac-intro-lab-4/```
+6. Run a plan and apply
+
+<img width="1474" height="641" alt="image" src="https://github.com/user-attachments/assets/e76976bb-8641-4b50-86a3-abaf15c0d4c2" />
+
+- With a successful plan you should see something similiar to my screenshot with 15 new resources to create.
+
+<img width="1126" height="911" alt="image" src="https://github.com/user-attachments/assets/307e7a88-3b18-42a2-9227-0040eca3796a" />
 
 <br>
-
-```terraform init```
-
-<br>
-
-<img width="876" height="302" alt="image" src="https://github.com/user-attachments/assets/f4c0b851-cda6-49a7-b0d6-c06ecf57a9aa" />
 
 ***
 
