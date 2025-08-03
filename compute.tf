@@ -43,6 +43,7 @@ resource "aws_instance" "lab_web_vm" {
   instance_type               = var.instance_type
   subnet_id                   = aws_subnet.lab_web_sn[count.index].id
   user_data                   = file("./bootstrap.sh")
+  security_groups             = [aws_security_group.web_servers_sg.id]
 
   tags = {
     
