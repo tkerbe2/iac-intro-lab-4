@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo \<\!DOCTYPE html\> > landing.html
 echo \<html\> >> landing.html
 echo \<head\> >> landing.html
