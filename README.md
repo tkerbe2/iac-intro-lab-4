@@ -39,8 +39,9 @@ Terraform Console is essentially a Terraform command that opens an interactive c
 ### 1. Fork my repo with your own personal GitHub
 
 - I recommend using your own computer with Git and Terraform installed to follow along. Additionally I would open this code with Visual Studio Code.
+- Fork this repo so you can have your own version if it to use.
 
-```git clone https://github.com/tkerbe2/iac-intro-lab-4/```
+<img width="1239" height="62" alt="image" src="https://github.com/user-attachments/assets/18d9c691-ce13-47b9-ad5a-f8ee7747b2bc" />
 
 <br>
 
