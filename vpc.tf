@@ -68,7 +68,7 @@ resource "aws_default_route_table" "lab_default_rt" {
   default_route_table_id = aws_vpc.lab_vpc.default_route_table_id
 
     route {
-    cidr_block = var.cidr_block
+    cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.lab_igw.id
     }
 
@@ -81,7 +81,7 @@ resource "aws_default_route_table" "lab_default_rt" {
 #=========================#
 # Route Table Association #
 #=========================#
-resource "aws_route_table_association" "rt_a" {
+resource "aws_route_table_association" "rta" {
   count          = length(local.availability_zones)
   subnet_id      = aws_subnet.lab_web_sn[count.index].id
   route_table_id = aws_default_route_table.lab_default_rt.id
