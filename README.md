@@ -212,8 +212,41 @@ At this point you should have completed analyzing and deploying the static code.
 
 <br>
 
-<img width="374" height="50" alt="image" src="https://github.com/user-attachments/assets/0a5d8742-7c4a-4d8e-9325-68eb046ecf59" />
 <img width="1256" height="56" alt="image" src="https://github.com/user-attachments/assets/3d85d635-11cf-4d9d-9636-e80b46a0baa9" />
+<img width="374" height="50" alt="image" src="https://github.com/user-attachments/assets/0a5d8742-7c4a-4d8e-9325-68eb046ecf59" />
+
+<br>
+
+***
+
+<br>
+
+### 8. Open the code in Visual Studio Code or an IDE
+
+- The code is heavily commented on each file except the shell files. Read through every comment in order and follow your way through it.
+- ***This activity will take you about a half hour following with or without the udemy video.***
+
+<br>
+
+***
+
+<br>
+
+### 9. Change some variables
+
+- When finished change some of the variables in the terraform.tfvars like region, org_name, env, and some of the maps and commit the changes.
+
+<br>
+
+***
+
+<br>
+
+### 10. Create a new HCP Terraform workspace
+
+<br>
+
+<img width="1246" height="656" alt="image" src="https://github.com/user-attachments/assets/ebd1fd8b-562c-4b75-ab1a-7961486fb75a" />
 
 <br>
 
