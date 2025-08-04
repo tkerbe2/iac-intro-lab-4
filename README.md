@@ -303,6 +303,11 @@ At this point you should have completed analyzing and deploying the static code.
 
 <img width="1125" height="748" alt="image" src="https://github.com/user-attachments/assets/da1f60a4-4fe6-42f7-982f-23d7882ade8a" />
 
+<br>
+
+***
+
+<br>
 
 # ✨ Congratulations!
 
