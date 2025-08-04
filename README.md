@@ -203,7 +203,23 @@ tags = {
 
 <br>
 
-# 🛑
+# Stop 🛑
+At this point you should have completed analyzing and deploying the static code.
+
+### 7. Fork the dynamic branch of this repo
+
+[iac-intro-lab-4 dynamic](https://github.com/tkerbe2/iac-intro-lab-4/tree/dynamic)
+
+<br>
+
+<img width="374" height="50" alt="image" src="https://github.com/user-attachments/assets/0a5d8742-7c4a-4d8e-9325-68eb046ecf59" />
+<img width="1256" height="56" alt="image" src="https://github.com/user-attachments/assets/3d85d635-11cf-4d9d-9636-e80b46a0baa9" />
+
+<br>
+
+***
+
+<br>
 
 # ✨ Congratulations!
 
