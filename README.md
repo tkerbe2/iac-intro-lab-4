@@ -245,7 +245,8 @@ At this point you should have completed analyzing and deploying the static code.
 ### 10. Create a new HCP Terraform workspace
 
 <br>
-- Open [HCP Terraform](https://app.terraform.io/app/)
+
+- Open HCP Terraform.
 - Click New and create a new workspace.
 - Select your default project
 - Select Version Control Workflow.
@@ -253,26 +254,66 @@ At this point you should have completed analyzing and deploying the static code.
 
 <br>
 
+<img width="1129" height="433" alt="image" src="https://github.com/user-attachments/assets/f5f69a10-18a7-4099-8134-c416b04e852c" />
+
+<br>
+
 <img width="685" height="431" alt="image" src="https://github.com/user-attachments/assets/8c7b5087-42ab-4cb0-8ada-a5c5ba6b8f86" />
 
 <br>
 
-<br>
-
-<img width="1129" height="433" alt="image" src="https://github.com/user-attachments/assets/f5f69a10-18a7-4099-8134-c416b04e852c" />
+- Click Advanced options
 
 <br>
+
+<img width="188" height="60" alt="image" src="https://github.com/user-attachments/assets/23230caf-7d09-40d5-a78e-0ef690d33834" />
+
+<br>
+
+- Under VCS triggers click on branch-based and type in dynamic.
+
+<br>
+
+<img width="715" height="427" alt="image" src="https://github.com/user-attachments/assets/d0e7af04-0254-46ce-bf4a-24d92cc603bb" />
+
+<br>
+
+***
+
+<br>
+
+### 11. Add Terraform workspace variables.
+
+<img width="1439" height="682" alt="image" src="https://github.com/user-attachments/assets/2cb7628b-e082-421e-8035-e7014d74cec9" />
+
+<img width="1125" height="748" alt="image" src="https://github.com/user-attachments/assets/aebf1c0e-b1a6-448c-ac51-012fe8b565ee" />
+
+
+### 12. Run a plan
+
+- Go to overview and run a plan.
+- Open up a few of the resources and check the names. You can tell it's the dynamic code because some of the resources have a count index.
+
+<img width="1125" height="748" alt="image" src="https://github.com/user-attachments/assets/da1f60a4-4fe6-42f7-982f-23d7882ade8a" />
+
 
 # ✨ Congratulations!
 
 ***
 
-You've finished the static code portion of this lab and have completed the following items:
-- ✅ Forked the repo.
+You've finished this massive lab and have completed the following items:
+- ✅ Forked the main repo.
 - ✅ Analyzed the static code.
 - ✅ Changed some values.
-- ✅ Deployed the code with Terraform Cloud.
-
+- ✅ Created a Terraform Cloud workspace for the static code.
+- ✅ Configured a Terraform Cloud workspace for the static code.
+- ✅ Deployed the static code with Terraform Cloud.
+- ✅ Forked the dynamic repo
+- ✅ Analyzed the dynamic code.
+- ✅ Changed some values.
+- ✅ Created a Terraform Cloud workspace for the dynamic code.
+- ✅ Configured a Terraform Cloud workspace for the dynamic code.
+- ✅ Deployed the static code with Terraform Cloud.
 ***
 
 
