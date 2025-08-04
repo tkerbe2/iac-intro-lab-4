@@ -80,9 +80,11 @@ tags = {
 
 ### 3. Change the tags
 
-- Find all the tags in all of the .tf files and change them to something different. In my example below you can see I've changed them to the following:
-- Don't forget you have to change these everywhere they exist - to be consistent so you will want to change them on all resources of security.tf, compute.tf, and vpc.tf.
+- Find all the tags in all of the .tf files and change them to something different. In my example below you can see I've changed them to something different.
+- Don't forget you should change these everywhere they exist to be consistent. You will want to change them wherever they exist; security.tf, compute.tf, and vpc.tf.
 - It will be easiest to run a find and replace in Visual Studio Code.
+
+<br>
 
 ```
 tags = {
@@ -91,6 +93,12 @@ tags = {
   }
 }
 ```
+
+<br>
+
+***
+
+<br>
 
 ### 4. Change the region
 
