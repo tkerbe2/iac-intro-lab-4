@@ -15,7 +15,8 @@ This demo does not require you to create resources - it is optional.
 
 # 💡 Terms and Concepts
 
-This lab will cover a lot and so before attempting to deploy this code please finish the readings below. These official HashiCorp documents will explain to you how and why to use what this sample code will display. In the udemy course I also have a video that will briefly cover how to use Terraform Console to validate some of our string-interpolation and variables. If you do not have access to the udemy course please use the resource links below to explore this topic. 
+This lab is quite exentsive and has two parts. Part 1 is analysis and deployment of static code. Part 2 is analysis and deployment of dynamic code. The purpose of this two part lab is to introduce you to variables, functions, logic loops (meta-arguments), and other more advanced topics by showing you why they make our code better and more reusable. Reusable code makes our jobs as engineers easier because instead of re-inventing the wheel every single deployment, we can just take something that already exists and modularize it, modify a few variables, and deploy it. The biggest takeaway from this lab should be the understanding of why we want our code to be more dynamic and rely less on statically typed attributes or characteristics of our resources 
+
 
 ## Terraform Console
 
@@ -23,7 +24,12 @@ Terraform Console is essentially a Terraform command that opens an interactive c
 
 <br>
 
-> 📖 Suggested Reading
+# 📖 Suggested Reading
+
+These official HashiCorp documents will explain to you how and why . In the udemy course I also have a video that will briefly cover how to use Terraform Console to validate some of our string-interpolation and variables. If you do not have access to the udemy course please use the resource links below to explore this topic. 
+
+<br>
+
 - [Overview - Variables and Outputs](https://developer.hashicorp.com/terraform/language/values)
 - [Input Variables](https://developer.hashicorp.com/terraform/language/values/variables)
 - [Local Values](https://developer.hashicorp.com/terraform/language/values/locals)
@@ -177,7 +183,7 @@ tags = {
 
 <br>
 
-6. Run a plan and apply
+### 6. Run a plan and apply
 
 <br>
 
@@ -197,6 +203,8 @@ tags = {
 
 <br>
 
+#🛑
+
 # ✨ Congratulations!
 
 ***
@@ -210,9 +218,3 @@ You've finished the static code portion of this lab and have completed the follo
 ***
 
 
-
-
-# ➡️ Next Steps non-udemy
-- Fork the dynamic branch of this repo.
-
-# Key Takeaways
