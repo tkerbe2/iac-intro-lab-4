@@ -30,6 +30,7 @@ Terraform Console is essentially a Terraform command that opens an interactive c
 - [Overview - Functions](https://developer.hashicorp.com/terraform/language/functions)
 - [Overview - Expressions](https://developer.hashicorp.com/terraform/language/expressions)
 - [for Expressions](https://developer.hashicorp.com/terraform/language/expressions/for)
+- [The count Meta-Argument](https://developer.hashicorp.com/terraform/language/meta-arguments/count)
 - [Strings - Interpolation](https://developer.hashicorp.com/terraform/language/expressions/strings)
 
 <br>
