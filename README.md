@@ -246,11 +246,24 @@ At this point you should have completed analyzing and deploying the static code.
 
 <br>
 
+- Create a new workspace.
+
 <img width="1246" height="656" alt="image" src="https://github.com/user-attachments/assets/ebd1fd8b-562c-4b75-ab1a-7961486fb75a" />
 
 <br>
 
-***
+- Select Version Control Workflow.
+- Select the forked repo.
+
+<br>
+
+<img width="685" height="431" alt="image" src="https://github.com/user-attachments/assets/8c7b5087-42ab-4cb0-8ada-a5c5ba6b8f86" />
+
+<br>
+
+<br>
+
+<img width="1129" height="433" alt="image" src="https://github.com/user-attachments/assets/f5f69a10-18a7-4099-8134-c416b04e852c" />
 
 <br>
 
