@@ -5,7 +5,7 @@
 
 # 🧪 Lab 4 - Testing Variables and Functions with Terraform Console
 
-In this lab you will be introduced to Terraform Console where we can test our variables, functions, data structures, and other logic with the CLI. In this lab you will not deploy any resources to AWS or Azure unless you want to.   
+In this lab there are two code bases. In this main repo there is code that is mostly static and will create resources with very basic configuration. You will analyze this code and slightly modify it, then use Terraform Cloud to run a plan and apply to see what the results look like. Once this part is complete you will analyze the code in the dynamic branch of this repo. This code deploys the same resources and the same amount of resources but dynamically with variables, functions, validation, and logic loops. You can use both of these code bases as examples and I hihgly recommend you test them both. If you do not have access to the videos and are not a udemy student deploy both of these and look at how they differ. Challenge yourself to try and understand the variables, the looping, and validation.   
 
 
 ### Resources Created:
@@ -15,7 +15,7 @@ This demo does not require you to create resources - it is optional.
 
 # 💡 Terms and Concepts
 
-In this guided exercise you will explore data types and how to use and manipulate them with variables, expressions, and functions. Building on these concepts you will then create some more dynamic code and validate it with Terraform Console. I recommend reading the links below from HashiCorps official documentation before starting the guided exercise. These readings are short and will give you some good fundamental knowledge of what we will cover in this guided exercise.
+This lab will cover a lot and so before attempting to deploy this code please finish the readings below. These official HashiCorp documents will explain to you how and why to use what this sample code will display. In the udemy course I also have a video that will briefly cover how to use Terraform Console to validate some of our string-interpolation and variables. If you do not have access to the udemy course please use the resource links below to explore this topic. 
 
 ## Terraform Console
 
@@ -32,6 +32,7 @@ Terraform Console is essentially a Terraform command that opens an interactive c
 - [for Expressions](https://developer.hashicorp.com/terraform/language/expressions/for)
 - [The count Meta-Argument](https://developer.hashicorp.com/terraform/language/meta-arguments/count)
 - [Strings - Interpolation](https://developer.hashicorp.com/terraform/language/expressions/strings)
+- [terraform console command](https://developer.hashicorp.com/terraform/cli/commands/console)
 
 <br>
 
@@ -184,7 +185,7 @@ tags = {
 
 <br>
 
-- With a successful plan you should see something similiar to my screenshot with 15 new resources to create.
+- With a successful plan you should see something similiar to my screenshot with 15 new resources to create. You can simply discard this run.
 
 <br>
 
@@ -200,11 +201,18 @@ tags = {
 
 ***
 
-You've finished this lab and have completed the following items:
-- ✅ Created a new AWS account.
-- ✅ Logged into your AWS root account.
-- ✅ Created an AWS IAM user that will be used for Terraform.
-- ✅ Created an access key and secret key with the new user.
+You've finished the static code portion of this lab and have completed the following items:
+- ✅ Forked the repo.
+- ✅ Analyzed the static code.
+- ✅ Changed some values.
+- ✅ Deployed the code with Terraform Cloud.
 
 ***
 
+
+
+
+# ➡️ Next Steps non-udemy
+- Fork the dynamic branch of this repo.
+
+# Key Takeaways
