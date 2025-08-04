@@ -3,19 +3,19 @@
 <br>
 
 
-# 🧪 Lab 4 - Testing Variables and Functions with Terraform Console
+# 🧪 Lab 4 - Testing variables, functions, and logic loops
 
 In this lab there are two code bases. In this main repo there is code that is mostly static and will create resources with very basic configuration. You will analyze this code and slightly modify it, then use Terraform Cloud to run a plan and apply to see what the results look like. Once this part is complete you will analyze the code in the dynamic branch of this repo. This code deploys the same resources and the same amount of resources but dynamically with variables, functions, validation, and logic loops. You can use both of these code bases as examples and I hihgly recommend you test them both. If you do not have access to the videos and are not a udemy student deploy both of these and look at how they differ. Challenge yourself to try and understand the variables, the looping, and validation.   
 
 
 ### Resources Created:
-This demo does not require you to create resources - it is optional.
+This demo does not require you to create resources. Resource creation is optional but recommended to test your work.
 
 <br>
 
 # 💡 Terms and Concepts
 
-This lab is quite exentsive and has two parts. Part 1 is analysis and deployment of static code. Part 2 is analysis and deployment of dynamic code. The purpose of this two part lab is to introduce you to variables, functions, logic loops (meta-arguments), and other more advanced topics by showing you why they make our code better and more reusable. Reusable code makes our jobs as engineers easier because instead of re-inventing the wheel every single deployment, we can just take something that already exists and modularize it, modify a few variables, and deploy it. The biggest takeaway from this lab should be the understanding of why we want our code to be more dynamic and rely less on statically typed attributes or characteristics of our resources 
+This lab is quite extensive and has two parts. Part 1 is analysis and deployment of static code. Part 2 is analysis and deployment of dynamic code. The purpose of this two part lab is to introduce you to variables, functions, logic loops (meta-arguments), and other more advanced topics by showing you why they make our code better and more reusable. Reusable code makes our jobs as engineers easier because instead of re-inventing the wheel every single deployment, we can just take something that already exists and modularize it, modify a few variables, and deploy it. The biggest takeaway from this lab should be the understanding of why we want our code to be more dynamic and rely less on statically typed attributes or characteristics of our resources 
 
 
 ## Terraform Console
