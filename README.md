@@ -245,13 +245,9 @@ At this point you should have completed analyzing and deploying the static code.
 ### 10. Create a new HCP Terraform workspace
 
 <br>
-
-- Create a new workspace.
-
-<img width="1246" height="656" alt="image" src="https://github.com/user-attachments/assets/ebd1fd8b-562c-4b75-ab1a-7961486fb75a" />
-
-<br>
-
+- Open [HCP Terraform](https://app.terraform.io/app/)
+- Click New and create a new workspace.
+- Select your default project
 - Select Version Control Workflow.
 - Select the forked repo.
 
