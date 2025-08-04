@@ -284,10 +284,17 @@ At this point you should have completed analyzing and deploying the static code.
 
 ### 11. Add Terraform workspace variables.
 
+- Add two environment variables.
+
+<br>
+
 <img width="1439" height="682" alt="image" src="https://github.com/user-attachments/assets/2cb7628b-e082-421e-8035-e7014d74cec9" />
 
-<img width="1125" height="748" alt="image" src="https://github.com/user-attachments/assets/aebf1c0e-b1a6-448c-ac51-012fe8b565ee" />
+<br>
 
+***
+
+<br>
 
 ### 12. Run a plan
 
