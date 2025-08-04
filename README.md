@@ -55,7 +55,11 @@ Terraform Console is essentially a Terraform command that opens an interactive c
 
 - Look at the code and try and figure out what it's creating and look at each resource block.
 
+<br>
+
 <img width="447" height="550" alt="image" src="https://github.com/user-attachments/assets/a00a8479-8efc-44ab-af47-22b6b09ade16" />
+
+<br>
 
 - Notice the naming on the tags and how similar it is between resources. This is something we can make more dynamic and reusable with variables.
 - Look at other code and see if you can find other patterns like this that could be variabilized. 
@@ -67,6 +71,8 @@ tags = {
   }
 }
 ```
+
+<br>
 
 ***
 
@@ -90,6 +96,8 @@ tags = {
 
 - Next open the providers.tf and change the region to something other than us-east-1.
 
+<br>
+
 ```
 terraform {
   required_providers {
@@ -104,7 +112,12 @@ provider "aws" {
   region = "us-east-2"
 }
 ```
+
+<br>
+
 - Now that you've changed the region you have to change your tags again for the naming convention to match right?
+
+<br>
 
 ```
 tags = {
@@ -113,7 +126,11 @@ tags = {
   }
 }
 ```
+<br>
+
 - I have now changes my region abbreviation from use1 (us-east-1) to use2 (us-east-2) to match.
+
+<br>
 
 ***
 
@@ -152,9 +169,15 @@ tags = {
 
 6. Run a plan and apply
 
+<br>
+
 <img width="1474" height="641" alt="image" src="https://github.com/user-attachments/assets/e76976bb-8641-4b50-86a3-abaf15c0d4c2" />
 
+<br>
+
 - With a successful plan you should see something similiar to my screenshot with 15 new resources to create.
+
+<br>
 
 <img width="1126" height="911" alt="image" src="https://github.com/user-attachments/assets/307e7a88-3b18-42a2-9227-0040eca3796a" />
 
@@ -163,11 +186,6 @@ tags = {
 ***
 
 <br>
-
-
-
-
-
 
 # ✨ Congratulations!
 
