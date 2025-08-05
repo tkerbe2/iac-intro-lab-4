@@ -3,7 +3,7 @@
 <br>
 
 
-# 🧪 Lab 4 - Testing variables, functions, and logic loops
+# 🧪 Lab 4 - Using variables, functions, and logic loops
 
 In this lab there are two code bases. In this main repo there is code that is mostly static and will create resources with very basic configuration. You will analyze this code and slightly modify it, then use Terraform Cloud to run a plan and apply to see what the results look like. Once this part is complete you will analyze the code in the dynamic branch of this repo. This code deploys the same resources and the same amount of resources but dynamically with variables, functions, validation, and logic loops. You can use both of these code bases as examples and I hihgly recommend you test them both. If you do not have access to the videos and are not a udemy student deploy both of these and look at how they differ. Challenge yourself to try and understand the variables, the looping, and validation.   
 
